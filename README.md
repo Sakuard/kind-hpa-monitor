@@ -59,8 +59,9 @@ kubectl apply -f ./service/metrics-server.yaml
 kubectl port-forward svc/node-service-demo-svc 8888:80 --namespace demo
 ```
 
-透過 k6 灌壓測
+### 透過 k6 灌壓測
 ![k6-hpa](./src/k6-hpa.png)
+### :point_down: 實測錄影 :point_down: 
 ![hpa](./src/hpa.gif)
 ```base=
 # cd /path/to/k6
