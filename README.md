@@ -1,3 +1,11 @@
+# 本地 Kubernetes 集群下的 HPA 測試與監控
+### Tools
+- kind
+- Prometheus
+- Grafana
+- Helm
+- K6
+
 ## 硬體設置
 ```bash=
 # 建立一個 kind cluster
