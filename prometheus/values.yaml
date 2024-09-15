@@ -1,0 +1,28 @@
+alertmanager:
+  enabled: false
+
+pushgateway:
+  enabled: false
+
+nodeExporter:
+  enabled: true
+
+kubeStateMetrics:
+  enabled: false
+
+# 修改 service 名稱為 prometheus 並使用 LoadBalancer
+service:
+  type: LoadBalancer
+  name: prometheus
+  port: 9090
+
+# 配置 Prometheus 部署到 monitoring namespace
+global:
+  podNamespace: monitoring
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorNamespaceSelector: {}
+    serviceMonitorSelector: {}
+    ruleNamespaceSelector: {}
+    ruleSelector: {}
